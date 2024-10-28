@@ -42,7 +42,7 @@ xlim([0.115, 0.8]);
 % ylim([-2, 3.5]);
 % yticks([-2, -1, 0,1.5,3 ]);
 % % % 
-% % % % 设置 y 轴刻度
+
 xticks([0.20, 0.30, 0.40, 0.50,0.60,0.70, 0.80]);
 
 % title('Production vs. Recycle');
@@ -53,14 +53,14 @@ xticks([0.20, 0.30, 0.40, 0.50,0.60,0.70, 0.80]);
 
 
 
-% 找到交点坐标
+
 [~, idx] = min(abs(production1 - 0));
 RPS_intersection = RPS(idx);
 Value_intersection = production1(idx);
 
-% 显示交点坐标
-fprintf('交点坐标：RPS = %.3f, Value = %.3f\n', RPS_intersection, Value_intersection);
+% show the results
+fprintf('results：RPS = %.3f, Value = %.3f\n', RPS_intersection, Value_intersection);
 
-% 找到 production1 与 y = 0 的交点
+% searching the condition for plastics to become carbon sinks
 RPS_zero_production1 = interp1(production1, RPS, 0);
 
